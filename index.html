@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel File Upload, Preview, and Graph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo">Shubhkarman Jaura</div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- home section start -->
+        <section class="home" id="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <div class="text-1">Build Graphs on the SPOT</div>
+                    <div class="text-2">Weather Analysis Tool</div>
+                    <div class="text-3"><span class="typing"></span></div>            
+                </div>
+            </div>
+        </section>
+
+        <!-- <h1>Excel File Upload, Preview, and Graph</h1> -->
+        <section class="body" id="body">
+            <div class="max-width">
+                <h2 class="title">Analysis Section</h2>
+                <div class = "subsection"> 
+
+                    <form id="upload-form" method="post" enctype="multipart/form-data">
+                        <input type="file" name="file" id="file-input" accept=".xls, .xlsx">
+                        <input type="button" value="Upload" onclick="uploadFile()">
+                    </form>
+
+                    <div class="graphs">
+                        <div class="sum-container" style="display: none;">
+                            <h1>Stats & Graphs </h1>
+                            <div class = 'stats'>
+                                <p><span id="MaxTemp"></span></p>
+                                <p><span id="MinTemp"></span></p>
+                            </div>
+                        
+
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                            <div>
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+    
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
