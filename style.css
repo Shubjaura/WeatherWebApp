@@ -1,0 +1,187 @@
+
+/* Add your CSS styles here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+/* section{
+    padding: 100px 0;
+} */
+.max-width{
+    max-width: 1300px;
+    padding: 0 100px;
+    margin: auto;
+}
+
+
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 25px 0;
+    background: black;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    color: rgb(21, 228, 239);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 0px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(21, 228, 239);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* home section styling */
+.home{
+    display: flex;
+    background: black no-repeat center;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: rgb(21, 228, 239);
+    font-weight: 500;
+}
+
+
+.body{
+    display: flex;
+    background:black no-repeat center;
+    color: #fff;
+    min-height: 500px;
+    padding-bottom: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.body .subsection{
+    background-color: black;
+    box-shadow: 0 0 10px white;
+    border-radius: 8px;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.body .max-width{
+    width: 1000px;
+}
+
+#upload-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #3b3b3b;
+    border: 1px solid #3b3b3b;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px #3b3b3b; */
+}
+
+#file-input {
+    height: 100%;
+    width: 250px;
+    cursor: pointer;
+}
+
+input[type="button"]{
+    width: 100px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.graphs{
+
+    padding-top: 40px;
+}
+
+.stats{
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
